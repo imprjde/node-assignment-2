@@ -10,7 +10,6 @@ app.get("/api/:pathParam", (req, res) => {
   const pathParam = req.params.pathParam;
   const queryParam = req.query.queryParam;
   res.json({
-    info: "GET request with path and query parameters",
     pathParam,
     queryParam,
   });
