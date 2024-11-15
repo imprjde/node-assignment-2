@@ -1,5 +1,6 @@
 const express = require("express");
 const morgan = require("morgan");
+const logger = require("./utils/logger");
 const app = express();
 const port = 3000;
 
@@ -12,10 +13,13 @@ app.get("/api/:pathParam", (req, res) => {
   const pathParam = req.params.pathParam;
   const queryParam = req.query.queryParam;
 
-  // Below code logs the details of the incoming GET request
-  console.log("GET Request received");
-  console.log("Path Parameter:", pathParam);
-  console.log("Query Parameter:", queryParam);
+  // Logging the details of the GET request
+  logger.info("GET Request received", {
+    endpoint: "/api/:pathParam",
+    method: req.method,
+    pathParam,
+    queryParam,
+  });
 
   res.json({
     message: `Received path parameter: ${pathParam} and query parameter: ${queryParam}`,
@@ -29,9 +33,12 @@ app.get("/api/:pathParam", (req, res) => {
 app.post("/api/data", (req, res) => {
   const data = req.body;
 
-  // Log the incoming POST request details
-  console.log("POST Request received");
-  console.log("Request Body:", JSON.stringify(data, null, 2));
+  // Logging the incoming POST request details
+  logger.info("POST Request received", {
+    endpoint: "/api/data",
+    method: req.method,
+    requestBody: data,
+  });
 
   res.json({
     info: "POST request with JSON data",
@@ -40,5 +47,5 @@ app.post("/api/data", (req, res) => {
 });
 
 app.listen(port, () => {
-  console.log(`Server is running on http://localhost:${port}`);
+  logger.info(`Server is running on http://localhost:${port}`);
 });

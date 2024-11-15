@@ -1,0 +1,6 @@
+{"level":"info","message":"Server is running on http://localhost:3000","timestamp":"2024-11-15T10:57:20.511Z"}
+{"endpoint":"/api/:pathParam","level":"info","message":"GET Request received","method":"GET","pathParam":"test","queryParam":"prajwal","timestamp":"2024-11-15T10:57:25.134Z"}
+{"level":"info","message":"Server is running on http://localhost:3000","timestamp":"2024-11-15T10:59:26.793Z"}
+{"endpoint":"/api/:pathParam","level":"info","message":"GET Request received","method":"GET","pathParam":"data","timestamp":"2024-11-15T11:00:51.913Z"}
+{"level":"info","message":"Server is running on http://localhost:3000","timestamp":"2024-11-15T11:01:12.143Z"}
+{"endpoint":"/api/data","level":"info","message":"POST Request received","method":"POST","requestBody":{"State":"Karnataka","country":"india"},"timestamp":"2024-11-15T11:01:15.335Z"}
