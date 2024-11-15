@@ -3,8 +3,7 @@
 **1) This screenshots describes the log for the GET Request.**
 **http://localhost:3000/api/:pathParam**
 
-!
-[Alt Text](./assets/screenshots/log-api1.png)
+![Alt Text](./assets/screenshots/log-api1.png)
 
 **This screenshots describes the Postman response for the Above Request.**
 
